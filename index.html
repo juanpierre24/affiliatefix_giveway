@@ -1,382 +1,184 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>JipYap</title>
-
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5d6808115fea9f001288d8c8&product=inline-share-buttons' async='async'></script>
-
-
-    <style type="text/css">
-
-body{margin:0px}
-
-   .header-wrap{
-width:100%;
-height:60px;
-background:white;
-border-bottom:1px solid black;
-} 
-
-.header-inner{
-max-width:1100px;margin:auto;background:white;height:60px;}
-
-.header-left{height:60px;background:white;width:33%;float:left}
-.header-center{height:60px;background:white;width:33%;float:left;font-size:32px;text-align:center;margin-top:-20px;font-family: arial;font-weight:bold}
-.header-right{height:60px;background:white;width:33%;float:right;}
-.sharethis-inline-share-buttons{padding:10px}
-
-
-.search{margin:auto;}
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: white;border-right: 1px solid grey;
-  color: Black;
-  padding: 20px;
-  font-size: 16px;
-  border:none;
-border-right:1px solid grey;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-.quick-wrap{width:100%;background:grey;}
-.quick-inner{max-width:1100px;margin:auto;background:#F2EDED;}
-.quick-box{width:100px;height:100px;background:grey;float:left;margin-top:25px;margin-right:12px;margin-left:12px}
-
-img{width:100%;height:auto;}
-
-
-.menu{height:70px;width:1100px;float:center;background:yellow;margin:auto;border:1px solid black}
-.menu-outer{max-width:1100px;margin:auto;border-bottom:1px solid black}
-.headwrap{max-width:1100px;margin:auto}
-
-.adbarwrap{width:100%;height:80px;background:black;display:none}
-.headerwrap{width:100%;height:70px;background:white;border-bottom:1px solid grey}
-.sliderwrap{width:100%;height:150px;background:orange;display:none}
-
-.banner{width:728px;height:90px;margin:auto;background:blue;margin-top:10px}
-
-.outerwrap{max-width:1100px;margin:auto}
-.left{width:300px;height:910px;float:left; background:none;margin-top:15px}
-.center{width:610px;height:1000px;float:left; background:none;margin-left:15px;margin-top:15px}
-.right{width:160px;height:600px;float:right;background:green;margin-top:15px}
-
-.sidebaritem{width:100%;height:100px;background:white;border:1px solid #d9d9d9;margin-bottom:10px}
-.sideimage{width:110px;height:100px;background:blue;float:left;margin-top:0px;margin-left:0px}
-.sidetitle{width:170px;height:80px;float:left;background:none;margin:10px;margin-top:-5px;font-family:arial;font-weight:bold;font-size:16px}
-
-
-.centerbig{width:100%;height:350px;background:yellow;border:1px solid #d9d9d9;}
-.centerbigtitle{width:100%;height:70px;background:white;border:1px solid #d9d9d9;font-family:arial;font-weight:bold;font-size:22px;padding-left:10px}
-
-.centersmall{width:100%;Height:120px;background:white;padding:top:10px;border:1px solid #d9d9d9;margin-top:10px}
-.centersimg{width:150px;height:120px;margin-top:0px;margin-left:0px;float:left;background:blue}
-.centerstitle{width:400px;height:100px;background:none;margin-left:170px;margin-top:10px;font-weight:bold;font-size:16px;font-family:arial;}
-
-.center2{width:100%;height:250px;margin-top:10px}
-.center2left{width:300px;height:250px;float:left}
-.center2right{width:300px;height:250px;float:right}
-.center2img{width:300px;height:200px;background:yellow;}
-.center2title{width:290px;height:40px;background:white;font-weight:bold;font-family:arial;font-size:14px;padding:5px;margin-top:-5px;line-height:12px}
-
-.sidebarad{width:300px;height:250px;background:purple;margin-top:10px;margin-bottom:10px;border:1px solid black}
-
-.ad468wrap{width:100%;height:80px;background:blue;margin-top:10px;padding:10px}
-.ad468{width:468px;height:80px;background:yellow;margin:auto;}
-
-.footer{width:97%;background:grey;color:white;float:left;bottom:0px;padding:15px;margin-top:600px}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 650px) {
-.outerwrap{width:95%;margin:auto;}
-    .quick-wrap{background:grey;}
-.quick-box{width:50px;height:50px;margin-right:5px}
-.left{width:100%;margin:auto;margin-top:10px}
-.center{width:100%;margin:auto;margin-top:10px}
-.right{max-width:160px;float:left;display:none}
-.menu{width:100%;margin-left:0px;height:50px;}
-    .nav-scroll{height:50px!important;}
-    .nav-scroll a{padding-top:17px!important}
-.sidetitle{width:170px;}
-.centerbig{margin-top:10px;}
-.sidebarad{margin:auto;margin-bottom:10px;}
-
-.centerstitle{width:250px;margin-left:70px}
-    .centersimg{width:50px;}
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
-.outerwrap{width:95%;margin:auto;}
-.left{width:100%;margin:auto;margin-top:10px}
-.center{width:100%;margin:auto;margin-top:270px}
-.right{width:100%;margin:auto;margin-top:10px}
-.menu{width:100%;margin-left:0px}
-.sidetitle{width:200px;}
-.centerbig{margin-top:10px;}
-
-.sidebarad{margin:auto;margin-bottom:10px;}
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
 
 
 
-}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
-
-
-    </style>
 </head>
-<body>
 
-    <div class='header-wrap'>
-<div class='header-inner'>
-<div class='header-left'>
-<div class="dropdown">
-  <button class="dropbtn">MENU</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-</div>
-<div class='header-center'>
-<p>JipYap</p>
-
-</div>
-<div class='header-right'>
-<div class="sharethis-inline-share-buttons"></div>
-</div>
-</div></div>
-
-<div class='menu-wrap'>
-<div class='menu'>
 <style>
-.nav-scroll {height:70px;
-    background-color: white;
-    overflow: auto;
-    white-space: nowrap;
-    position: relative;margin:auto;
-}
-.nav-scroll a {font:14px arial;
-    display: inline-block;text-transform:uppercase;
-    color: black; font-weight:bold;
-    text-align: center;
-    padding-right: 24px; padding-top:27px;padding-bottom:12px;padding-left:10px;
-    text-decoration: none;
-}
+
+body{width:100%; margin:0px;background-image: url('https://walli.quosmos.com/files/thumbs/c/6/e/c6e5c2f80bed69798feae447b9ffdc9157c0560a/color15__800_800.jpg');}
+.outer-wrapper{width:750px;margin:auto}
+.header{width:100%; height:150px;background:yellow;}
+.main{width:100%; background:white;padding-top:10px;padding-bottom:20px}
+.footer{width:100%; background:black; height:100px;text-align:center;color:white;font-family: arial;font-size:28px;padding-top:30px}
+
+
+.title{font-size:100px;font-family: arial black;text-align:center}
+
+.artblock{width:730px;margin:auto;height:200px; border: 1px solid black;margin-top:20px}
+.artimage{float:left;height:200px;width:300px; background:grey;}
+.arttext{float:right;width:410px;background:white;height:180px;margin:10px;
+font-family:arial black;font-size:28px}
+
+.ad728{width:728px;height:90px;background:red;margin:auto;margin-top:20px;}
+
+img{width:300px;height:200px}
 
 </style>
-<div class="nav-scroll">
-  <a href="https://jipyapbuzz.com">Home</a>
-  <a href="https://www.news24.com/">News</a>
-  <a href="https://listverse.com/">Lists</a>
- <a href="https://www.playbuzz.com/quizzes">Quizzes</a>
-  <a href="https://www.rd.com/jokes/">Jokes</a>
 
-
-</div></div>
-
-</div>
-    
- 
-
-
-<div class='quick-wrap'>
-<div class='quick-inner'>
-<div class='quick-box'>
-<img src='https://www.mobileworldlive.com/wp-content/themes/theme_mobileworldlive/images/footer-facebook.jpg'>
-</div>
-
-<div class='quick-box'>
-<img src='https://yt3.ggpht.com/a/AGF-l7-BBIcC888A2qYc3rB44rST01IEYDG3uzbU_A=s100-c-k-c0xffffffff-no-rj-mo'>
-</div>
-
-
-<div class='quick-box'>
-<img src='https://connectoricons-prod.azureedge.net/youtube/icon_1.0.1083.1301.png'>
-</div>
-
-
-<div class='quick-box'>
-<img src='https://lh3.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s100-rw'>
-</div>
-
-<div class='quick-box'>
-<img src='https://lh3.googleusercontent.com/2sREY-8UpjmaLDCTztldQf6u2RGUtuyf6VT5iyX3z53JS4TdvfQlX-rNChXKgpBYMw=s100-rw''>
-</div>
-
-
-
-<div class='quick-box'>
-<img src='https://lh3.googleusercontent.com/8Vw-7MAm558750a4M55fiOlUf7lP2cYnFuqSWynrygIiyEEiQQDa_xxHKYOX83L0UD2T=s100-rw'>
-</div>
-
-
-<div class='quick-box'>
-<img src='https://media.glassdoor.com/sql/11891/netflix-squarelogo-1508988775050.png'>
-</div>
-
-<div class='quick-box'>
-<img src='https://yt3.ggpht.com/a/AGF-l79Z6NRUV2_RT4mXGiwu5MGju7OZKUU1jUN7OQ=s100-c-k-c0xffffffff-no-rj-mo'>
-</div>
-
-</div>
-
-
-
-
+<body>
+<div class='outer-wrapper'>
+<div class='header'>
+<div class='title'>
+JIPYAP.COM
 </div>
 </div>
 
+<div class='main'>
 
-
-<div class='outerwrap'>
-
-
-
-<div class='left'>
-
-<!-- Ads Managed by AdSpyglass.com -->
-<iframe class="na" frameborder="0" scrolling="no" width="100%" height="100%" sandbox="allow-scripts allow-popups allow-forms" src="//a.o333o.com/api/spots/209793?p=1"></iframe>
-
-
-<div class='sidebaritem'>
-<div class='sideimage'><a href="https://celebrity.red/buzz/dwarf-bodybuilder-black-transgender-girlfriend"><img src='https://1.bp.blogspot.com/-JDl4eMVRdY4/XefpJRC24NI/AAAAAAAAASI/_6VoKVrllzw-UuOcy3QfcB9Lz7ADJcb_wCLcBGAsYHQ/s1600/midg.png'/>
+<div class='ad728'>
 </div>
-<div class='sidetitle'>
-<p>4ft 4in bodybuilder finds love with his 6ft 3in black transgender girlfriend</p></a>
+
+<a href="https://radaronline.com/photos/kim-kardashian-sex-tape/">
+<div class='artblock'>
+<div class='artimage'>
+<img src="http://popbytes.com/wp-content/uploads/2013/01/kim-kardashian-sex-tape.jpg">
 </div>
+<div class='arttext'>
+Kim Kardashian S*x tape Scandal Finally Reveiled!!
+</div>
+</div></a>
+
+
+
+<a href="https://me.askmen.com/topten/1006921/all-time-iplayboyi-models">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://pbs.twimg.com/media/BvvC41oIIAAvgNL?format=jpg&name=small">
+</div>
+<div class='arttext'>
+10 Most Beautiful bikini models you have ever seen.
+</div>
+</div></a>
+
+
+
+<a href="https://www.onemedical.com/blog/get-well/erectile-dysfunction-treatment">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://static.india.com/wp-content/uploads/2017/06/Better-erection.jpg">
+</div>
+<div class='arttext'>
+Use this simple home made remedy to last all night
+</div>
+</div></a>
+
+
+
+
+<a href="https://www.thetalko.com/celebrities-who-showed-too-much-on-the-red-carpet/">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://www.witszen.com/wp-content/uploads/2019/10/EC-3.jpg">
+</div>
+<div class='arttext'>
+Photos of when celebrities show to much
+</div>
+</div></a>
+
+
+
+<a href="https://www.vixendaily.com/diet/17-incredible-home-remedies-to-lose-belly-fat/">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://secureservercdn.net/198.71.233.179/j1m.936.myftpupload.com/wp-content/uploads/2018/10/how-to-lose-belly-fat-min-1000x580.jpg">
+</div>
+<div class='arttext'>
+Use this home made remedy and melt away fat overnight (up to 10 kgs in one Week!!)
+</div>
+</div></a>
+
+<div class='ad728'>
 </div>
 
 
 
-<div class='sidebaritem'>
-<div class='sideimage'><a href="https://celebrity.red/buzz/hulk-bodybuilder"><img src='https://1.bp.blogspot.com/-2Mimz9MnyxQ/XefpMmpE-LI/AAAAAAAAASM/ej8cz7lyqqsyAWNlvyfIU4r8Dg3fNJaQgCLcBGAsYHQ/s1600/bb.png'/>
+<a href="https://viralnova.com/photo-busted/">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://en.homenal.com/wp-content/uploads/2018/07/page2.jpeg">
 </div>
-<div class='sidetitle'>
-<p>Bodybuilder tries so hard to become the Hulk that he turns his muscles to rock</p></a>
-</div>
-</div>
-
-
-<div class='sidebaritem'>
-<div class='sideimage'><a href="https://celebrity.red/buzz/celebrity-plastic-surgery-disasters"><img src='https://1.bp.blogspot.com/-94-ZunIjtL0/XefpQ3e4_4I/AAAAAAAAASQ/1mqRPtdozMgl_k612FaSt683yWJ4E9UCwCLcBGAsYHQ/s1600/celeb%2Bdis.png'/>
-</div>
-<div class='sidetitle'>
-<p> The 20 most shocking celebrity plastic surgery disasters of all time</p></a>
-</div>
-</div>
-
-<div class='sidebarad'>
-<img src='https://bimber.bringthepixel.com/main/wp-content/uploads/sites/17/2018/07/neon_type1_v02.jpg'/>
+<div class='arttext'>
+Husband left his wife after seeying after taking a closer look at this picture, can you see why?
 
 </div>
-
-
-<div class='sidebaritem'>
-<div class='sideimage'><a href="https://www.dazzling.news/a5095/celebrities-who-don-t-wear-underwear"><img src='https://1.bp.blogspot.com/-L0GV2HorPGk/XefsD58P4DI/AAAAAAAAAS0/Gxue2MgobBU5f1_NICLCQPt1ar--FO4QgCLcBGAsYHQ/s1600/underware.png'/>
-</div>
-<div class='sidetitle'>
-<p>This is what happens when celebs dont wear underwear</p></a>
-</div>
-</div>
-
-
-
-<div class='sidebaritem'>
-<div class='sideimage'><a href="https://www.healthline.com/nutrition/20-tips-to-lose-belly-fat"><img src='https://1.bp.blogspot.com/-eiaNeHOdJyc/XefsIqb70HI/AAAAAAAAAS4/hH2ZfK6k2rkfnxROBe1N217ksOdkNDP4wCLcBGAsYHQ/s1600/fat.png'/>
-</div>
-<div class='sidetitle'>
-<p>#1 Trick to kill belly fat in 1 week (Do this Daily)</p></a>
-</div>
-</div>
-
-<div class='sidebaritem'>
-<div class='sideimage'><a href="https://worldnewsdailyreport.com/woman-sues-samsung-for-1-8m-after-cell-phone-gets-stuck-inside-her-vagina/"><img src='https://1.bp.blogspot.com/-JKEekYKfrpE/XefsL67-sLI/AAAAAAAAAS8/4g8bH3EgUN8HzoNq2s8mEagyEqyqopNMQCLcBGAsYHQ/s1600/samsung.png'/>
-</div>
-<div class='sidetitle'>
-<p>Woman sues Samsung for $1.8M after cell phone gets stuck inside her vagina.</p> </a>
-</div>
-</div>
-
-<div class='sidebarad'>
-<img src='https://bimber.bringthepixel.com/main/wp-content/uploads/sites/17/2018/07/neon_type1_v02.jpg'/>
-</div>
+</div></a>
 
 
 
 
+<a href="https://thoughtcatalog.com/brittany-cox/2017/02/14-women-reveal-the-best-orgasm-theyve-ever-had-and-how-exactly-they-came-like-never-before/">
+<div class='artblock'>
+<div class='artimage'>
+<img src='https://img.elephantjournal.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-10-at-6.46.04-PM.png'>
+</div>
+<div class='arttext'>
+
+The story of the best orgasm ive ever had.
+</div>
+</div></a>
+
+
+
+
+<a href="https://www.youtube.com/watch?v=OwEzNDS5j-I">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://i.pinimg.com/474x/11/a1/03/11a103a06ccc4432446f817636eee44a.jpg">
+</div>
+<div class='arttext'>
+
+How to make your natural hair look like salon quality at home.
 
 </div>
-<div class='center'>
-<div class='centerbig'><a href="https://www.thesun.co.uk/living/3196659/this-is-the-real-story-behind-kim-kardashians-sex-tape-and-how-it-made-her-a-star/"><img src='https://www.sickchirpse.com/wp-content/uploads/2016/07/Kim-Kardashian-sex-tape-1.jpg'>
-<div class='centerbigtitle'>
-<p>Kim Kardashian S*x Tape Scandal Finally Revealed</p></a>
+</div></a>
+
+
+
+
+<a href="https://www.iwillteachyoutoberich.com/blog/3-proven-steps-anyone-can-take-to-become-rich/">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://pbs.twimg.com/media/BbnhR6bIgAARdCO?format=jpg&name=medium">
+</div>
+<div class='arttext'>
+How to get rich in 2020, minimal investment required.
+
+</div>
+</div></a>
+
+
+
+
+<a href="https://www.vox.com/science-and-health/2020/3/6/21161234/coronavirus-covid-19-science-outbreak-ends-endemic-vaccine">
+<div class='artblock'>
+<div class='artimage'>
+<img src="https://img.jakpost.net/c/2020/04/03/2020_04_03_91686_1585887859._large.jpg">
+</div>
+<div class='arttext'>
+
+Is Covid 19 going to wipe out the human race?
+
+</div>
+</div></a>
+
+
+<div class='ad728'>
 </div>
 
-<div class='centersmall'>
-<div class='centersimg'><a href="https://worldnewsdailyreport.com/lottery-winner-arrested-for-dumping-200000-of-manure-on-ex-boss-lawn/"><img src='https://1.bp.blogspot.com/-UOA2RfnxFyA/XefvhMKjcbI/AAAAAAAAATc/gHkfmuocTFQu6Qzem9CYQH7zFYQQGtuAACLcBGAsYHQ/s1600/lotto.png'/>
-</div>
-<div class='centerstitle'>
-<p>Lottery winner arrested for dumping $200,000 of manure on ex-boss lawn.</p></a>
-</div>
-
-</div>
-
-<div class='centersmall'>
-<div class='centersimg'><a href="https://www.huzlers.com/man-eats-girlfriends-booty-for-the-first-time-dies-from-e-coli/"><img src='https://1.bp.blogspot.com/-3HFCt5ZBG74/XefvoOgeCNI/AAAAAAAAATg/7ukpl2gNGsIu-uURfXG6c7tv5rZRqDruQCLcBGAsYHQ/s1600/ecoli.png'/>
-</div>
-<div class='centerstitle'>
-<p>Man eats girlfriends booty for the first time and dies of E Coli</P></a>
-</div>
 
 </div>
 
@@ -384,50 +186,22 @@ img{width:100%;height:auto;}
 
 
 
-
-<div class='centersmall'>
-<div class='centersimg'><a href="https://www.huzlers.com/florida-man-arrested-for-tranquilizing-and-raping-alligators-in-everglades/"><img src='https://1.bp.blogspot.com/-Rq0slcByHbg/Xefv5FEbyvI/AAAAAAAAATs/0MGfbcYX1tYi2031MOWQd8zKrdkD_6pPgCLcBGAsYHQ/s1600/allegator.png'/>
-</div>
-<div class='centerstitle'>
-<p>Florida Man arrested for tranquilizing and raping allegators in the Everglades</p></a>
-</div>
-
-</div>
-
-<div class='centersmall'>
-<div class='centersimg'><a href="https://worldnewsdailyreport.com/fbi-seizes-over-3000-penises-during-raid-at-morgue-employees-home/"><img src='https://1.bp.blogspot.com/-vJFuPHHg9Dk/Xefv9_pTFxI/AAAAAAAAATw/lUp3huP-6wYOpoA685Spr1AIX27jDyWBQCLcBGAsYHQ/s1600/fbi.png'/>
-</div>
-<div class='centerstitle'>
-<p>FBI seizes over 3,000 penises during raid at morgue employees home</p></a>
-</div>
-
-</div>
-
-<div class='centersmall'>
-<div class='centersimg'><a href="https://worldnewsdailyreport.com/babysitter-transported-to-hospital-after-inserting-a-baby-in-her-vagina/"><img src='https://1.bp.blogspot.com/-Eo5bDxc4KlU/XefwCAgIUFI/AAAAAAAAAT0/IbpfIDsWOdIcoor6Fb927P5Ab0f2z6sEwCLcBGAsYHQ/s1600/babysitter.png'/>
-</div>
-<div class='centerstitle'>
-<p>Babysitter transported to hospital after inserting baby into vagina</p></a>
+<div class='footer'>
+Copyright JipYap 2020, Created by Juan Pierre Claasen
 </div>
 
 </div>
 
 
-
-</div>
-
-</div>
-<div class='right'>
-<img src='https://www.philippinemarketing.org/wp-content/uploads/2019/05/ad-placeholder_vertical-2.png'>
-</div>
-
-
-
-</div></div>
+<script type="text/javascript">
+    var adfly_id = 23383319;
+    var adfly_advert = 'int';
+    var popunder = true;
+    var exclude_domains = ['example.com', 'yoursite.com'];
+</script>
+<script src="https://cdn.ay.gy/js/link-converter.js"></script>
 
 
- 
-</div>
-    </body>
+</body>
 
 </html>
