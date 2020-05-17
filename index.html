@@ -196,13 +196,6 @@ Copyright JipYap 2020, Created by Juan Pierre Claasen
 </div>
 
 
-<script type="text/javascript">
-    var adfly_id = 23383319;
-    var adfly_advert = 'int';
-    var popunder = true;
-    var exclude_domains = ['example.com', 'yoursite.com'];
-</script>
-<script src="https://cdn.ay.gy/js/link-converter.js"></script>
 
  
  <!-- Composite Start -->
@@ -214,62 +207,13 @@ Copyright JipYap 2020, Created by Juan Pierre Claasen
 
 
  
- <script>
-
-//Pop-under window- By JavaScript Kit
-//Credit notice must stay intact for use
-//Visit http://javascriptkit.com for this script
-
-//specify page to pop-under
-var popunder="https://www.passtechusa.com/c96dc26u0?key=063aafae0758945f2496e53e94ac7e15"
-
-//specify popunder window features
-//set 1 to enable a particular feature, 0 to disable
-var winfeatures="width=800,height=510,scrollbars=1,resizable=1,toolbar=1,location=1,menubar=1,status=1,directories=0"
-
-//Pop-under only once per browser session? (0=no, 1=yes)
-//Specifying 0 will cause popunder to load every time page is loaded
-var once_per_session=0
-
-///No editing beyond here required/////
-
-function get_cookie(Name) {
-  var search = Name + "="
-  var returnvalue = "";
-  if (document.cookie.length > 0) {
-    offset = document.cookie.indexOf(search)
-    if (offset != -1) { // if cookie exists
-      offset += search.length
-      // set index of beginning of value
-      end = document.cookie.indexOf(";", offset);
-      // set index of end of cookie value
-      if (end == -1)
-         end = document.cookie.length;
-      returnvalue=unescape(document.cookie.substring(offset, end))
-      }
-   }
-  return returnvalue;
-}
-
-function loadornot(){
-if (get_cookie('popunder')==''){
-loadpopunder()
-document.cookie="popunder=yes"
-}
-}
-
-function loadpopunder(){
-win2=window.open(popunder,"",winfeatures)
-win2.blur()
-window.focus()
-}
-
-if (once_per_session==0)
-loadpopunder()
-else
-loadornot()
-
-</script>
+ <script type="text/javascript">
+            var adlinkfly_url = 'https://za.gl/';
+            var adlinkfly_api_token = 'ac89a56981f961b8499e694b7cad258688882569';
+            var adlinkfly_advert = 2;
+            var adlinkfly_exclude_domains = ['example.com', 'yoursite.com'];
+        </script>
+        <script src='//za.gl/js/full-page-script.js'></script>
  
  
 </body>
