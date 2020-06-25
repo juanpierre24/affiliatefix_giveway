@@ -1,0 +1,504 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<style>
+
+body{margin:0px;font-family: 'Roboto', sans-serif;background:f8fafa;}
+
+.header-wrapper{width:100%;height:60px;background:white;position:fixed;box-shadow:rgb(200, 232, 237) 17px 18px 18px 16px;}
+.header-inner{margin:auto;max-width:1000px}
+.testi{float:left;margin-top:30px;margin-right:30px;height:350px;width:460px;background:grey}
+
+/* header */
+
+.header {
+  background-color: #fff
+  
+  ;width:100%;
+  max-width: 1000px;
+  z-index: 3;margin:auto;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu a{color:black;}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.slidebox{max-width:1000px;height:400px;padding:20px}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;max-height:400px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 700px) {
+  .text {font-size: 11px}
+p1{font-size:40px!important;}
+p2{font-size:28px!important;}
+p2text{font-size:18px!important}
+p3{font-size:28px!important;width:100%;margin-top:50px}
+.header-wrapper{box-shadow:rgb(200, 232, 237) 7px 8px 8px 6px;}
+.header .logo{font-size:22px;padding-top:17px}
+.package{margin:auto;float:center}
+.why{height:2000px;width:100%;margin-top:-100px;text-align:center}
+.title1{margin-top:500px!important;font-size:16px!important;}
+.title{font-size:16px!important;}
+.testi{margin-right:0px}
+}
+
+
+
+
+.header-left{width:500px;float:left;padding-top:10px;color:red}
+.register{width:286px;margin:auto;margin-top:50px;font-weight:bold;text-transform:uppercase}
+.hbr{height:42px;width:120px;background:white;float:left;margin-left:20px;border-radius: 25px;text-align:center;font-size:16px;padding-top:17px;color:black;}
+.hbl{height:42px;width:120px;background:white;float:right;border-radius: 25px;text-align:center;font-size:16px;padding-top:17px;color:black;}
+.wrapper{max-width:800px;height:500px;margin:auto;}
+.how2{max-width:1000px;margin:auto;font-size:20px;padding:20px}
+.slider{width:100%;height:570px;background:black; background-image: url("http://2.bp.blogspot.com/-ufprmEtJw5I/UFwE6WRNGuI/AAAAAAAABXs/2XGTvLGs34w/s1600/156.jpg");}
+.title{height:40px;max-width:1000px;margin:auto;background:blue;margin-top:50px;box-shadow:rgb(200, 232, 237) 7px 18px 24px 6px;
+;color:white;font-size:26px;padding:10px;font-family:arial black}
+.intro{max-width:1000px;margin:auto; padding-top:70px;font-family: 'Roboto', sans-serif;text-align:center;font-size:22px;color:white}
+.title1{height:40px;max-width:1000px;margin:auto;background:blue;margin-top:50px;box-shadow:rgb(200, 232, 237) 7px 18px 24px 6px;
+;color:white;font-size:26px;padding:10px;font-family:arial black}
+.package{width:330px;height:400px;margin:auto;margin-top:50px;box-shadow:rgb(200, 232, 237) 7px 18px 24px 6px;border:1px solid grey;}
+.why{float:right;width:400px;height:400px;font-size:22px}
+.footer{width:100%;height:50px;background:black;}
+
+</style>
+
+<body>
+
+<div class='header-wrapper'>
+<div class='header-inner'>
+<div class="header">
+  <a class="logo">Dreams 2 Reality Network</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+  
+    <li><a href="#careers">Login</a></li>
+    <li><a href="#contact">Register</a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class='slider'>
+
+<div class='intro'>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <div class='slidebox'>
+
+</br>
+
+
+<p1 style='margin-top:20px;font-size:72px;width:100%;font-family:arial black'>R250 Donation Funding Network</p1>
+
+<p style='margin-top:50px;'>
+A donation funding network that is simple, fast and affordable.</p>
+
+<div class='register'>
+<div class='hbr'>Login</div>
+<div class='hbl'>Register
+
+</div>
+</div>
+
+</div>
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+ <div class='slidebox'>
+
+
+<p2 style='font-size:48px;font-family:arial black'>
+</br>
+Make R2000 from just R250</p2>
+<p2text></br></br>
+Welcome to Dreams 2 Reality Network.
+
+
+ An authentic matrix platform that can enable you to make a profit of up to R2000 from as little as R250. Ours is a simple and uncomplicated matrix platform. We have no complicated levels, and we are not promising large sums of money. We only have 2 realistic levels to cycle out. MoneyPals Network is set to be the rocking platform for all, from beginners to ambitious hustlers! Do join us to witness the revolution!.
+</p2text>
+<div class='register'>
+<div class='hbr'>Login</div>
+<div class='hbl'>Register
+
+</div>
+</div>
+
+</div>
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <div class='slidebox'>
+</br></br></br>
+Get Paid All The Way
+</br>
+</br>
+<p3 style='font-size:58px;font-family:arial black;'>Give | Share | Recieve</p3>
+</br>
+</br>
+Always get paid when your downliners upgrade or register
+
+<div class='register'>
+<div class='hbr'>Login</div>
+<div class='hbl'>Register
+
+</div>
+</div>
+
+
+</div>
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center;display:none">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+</div>
+
+
+</div>
+<big>
+
+<div class='wrapper'>
+
+<div class='package'>
+<img style='width:330px;height:400px;'src='https://i.imgur.com/W5kRY6H.png'>
+
+</div></div>
+
+<div class='why'>
+<p style='font-size:32px;margin-top:50px;font-family:arial black;color:blue'> Why Join Us?</p>
+<i class="fa fa-check" style="font-size:28px;color:green;padding-right:15px"></i>Low investment
+</br></br>
+<i class="fa fa-check" style="font-size:28px;color:green;padding-right:15px"></i>Sustainable
+</br></br>
+<i class="fa fa-check" style="font-size:28px;color:green;padding-right:15px"></i>Work as a team
+</br></br>
+<i class="fa fa-check" style="font-size:28px;color:green;padding-right:15px"></i>Multiple accounts allowed
+
+<div style='float:left'class='register'>
+<div style='background:blue;color:white;width:300px' class='hbr'>Join Now With R250</div>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+<div class='title1'>
+How to join Dreams 2 Reality Network.
+</div>
+
+<div class='how2'>
+</br>
+1. Join using a link/username from an upliner of your choosing.
+</br></br>
+2. Pay the R250 joining fee directly to your upliner using the details in the system.
+</br></br>
+3. Contact your Upliner to confirm receipt of the payment and activate your account on the website</br></br>
+
+
+</div>
+
+
+
+
+
+<div class='title'>
+How To Earn from Dreams 2 Reality Network.
+</div>
+
+<div class='how2'>
+</br>
+1. Share your link/username to potential downliners. 2 people can join directly under you, earning you R500.
+</br></br>
+2. Upgrade to level 2 using the R500 you gained from your direct downliners.
+</br></br>
+3. Get paid 4 X R500 from your 2nd generation downliners, making you a profit of R2000. It's that simple.
+</br>
+</br>
+</div>
+
+
+<div class='title'>
+Testimonials.
+</div>
+<div class='how2'>
+<div class='testi'>
+</div>
+<div class='testi'>
+</div>
+<div class='testi'>
+</div>
+<div class='testi'>
+</div>
+
+</div>
+
+<div style='margin-top:800px'class='title'>
+Disclaimer
+</div>
+<div class='how2'>
+We are not a bank nor a financial institution, we are a peer to peer DONATION FUNDING network. We do not collect donations nor give donations, members of this network pay each other willingly.
+</br>
+</br>
+The platform is a simple system used to coordinate donations in a systematic manner and communicating via email to its members
+</br></br>
+
+This is not financial advice we giving, or claiming to give advice regarding finances, but a free willed participating effort, and if you do not bring 2 new referrals, this system is not for you, do not join, do not expect others to join donating members.
+</br></br>
+
+Any tax implications is for your own declaration, tax is not deducted by the system, it simply shows you how you donated and receieved.
+</div></div>
+</div>
+
+</big>
+
+<div class='footimg'>
+<img style='width:100%;height:300px;'src='https://i.imgur.com/UU55YZs.png'>
+</div>
+
+<div class='footer'>
+
+</div>
+
+</body>
+
+</html>
