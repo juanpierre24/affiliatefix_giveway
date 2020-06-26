@@ -7,15 +7,80 @@
 <style>
 
 body{margin:0px;background:black}
-main{max-width:1000px;height:2000px;margin:auto;background:white}
+main{max-width:1000px;height:auto;margin:auto;background:white}
+.join{width:40%;margin:auto;text-align:center;background:#ff0066;padding:10px;border-radius:25px;
+font-family:arial;color:white}
 
-
+      
+      .wrapper {
+        display: flex;
+        height: 20vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        border: 1px transparent;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+        color: #eeeeee;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Arial;
+        font-size: 20px;
+        padding: 8px 30px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 20px;
+        -webkit-animation: glowing 1300ms infinite;
+        -moz-animation: glowing 1300ms infinite;
+        -o-animation: glowing 1300ms infinite;
+        animation: glowing 1300ms infinite;
+      }
+      @-webkit-keyframes glowing {
+        0% {
+          background-color: #0091b2;
+          -webkit-box-shadow: 0 0 3px #0091b2;
+        }
+        50% {
+          background-color: #21c7ed;
+          -webkit-box-shadow: 0 0 15px #21c7ed;
+        }
+        100% {
+          background-color: #0091b2;
+          -webkit-box-shadow: 0 0 3px #0091b2;
+        }
+      }
+      @keyframes glowing {
+        0% {
+          background-color: #0091b2;
+          box-shadow: 0 0 3px #0091b2;
+        }
+        50% {
+          background-color: #21c7ed;
+          box-shadow: 0 0 15px #21c7ed;
+        }
+        100% {
+          background-color: #0091b2;
+          box-shadow: 0 0 3px #0091b2;
+        }
+      }
+   
+     
 </style>
 
 <body>
 
 <main>
-<img style='width:100%;height:auto;'src='https://i.imgur.com/IOOlw7j.jpg'>
+<img style='width:100%;height:auto;'src='https://i.imgur.com/MbLvZ0U.png'>
+
+ <div class="wrapper">
+      <a class="button" href="#">JOIN OUR WINNING TEAM TODAY</a>
+      
+      
+    </div>
+<img style='width:100%;height:auto;'src='https://i.imgur.com/UU55YZs.png'>
+
 </main>
 
 
